@@ -1,18 +1,11 @@
 # Rectangle Calculator
 
 A C# console application that asks for the height and width of a rectangle
-and prints its area and perimeter.
+and shows its area and perimeter.
 
-Custom methods used:
+Methods:
 
-- `ReadPositiveNumber` – reads and validates user input
-- `CalculateArea` – returns `height * width`
-- `CalculatePerimeter` – returns `2 * (height + width)`
-- `PrintResults` – displays the results
-
-## Run
-
-```
-cd RectangleCalculator
-dotnet run
-```
+- `ReadInput` - reads the height and width from the user
+- `CalculateArea` - returns height * width
+- `CalculatePerimeter` - returns 2 * height + 2 * width
+- `DisplayResults` - prints the area and perimeter
