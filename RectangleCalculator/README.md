@@ -8,4 +8,4 @@ Methods:
 - `ReadInput` - reads the height and width from the user
 - `CalculateArea` - returns height * width
 - `CalculatePerimeter` - returns 2 * height + 2 * width
-- `DisplayResults` - prints the area and perimeter
+- `DisplayResults` - clears the screen and prints a summary table

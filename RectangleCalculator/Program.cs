@@ -27,10 +27,15 @@ namespace RectangleCalculator
             return 2 * height + 2 * width;
         }
 
-        static void DisplayResults(double area, double perimeter)
+        static void DisplayResults(double height, double width,
+            double area, double perimeter)
         {
-            Console.WriteLine("The area is: " + area);
-            Console.WriteLine("The perimeter is: " + perimeter);
+            Console.Clear();
+            Console.WriteLine("Summary of Rectangle Measurements\n");
+            Console.WriteLine("{0, -12} {1,8:N1}", "Height", height);
+            Console.WriteLine("{0, -12} {1,8:N1}", "Width", width);
+            Console.WriteLine("{0, -12} {1,8:N1}", "Area", area);
+            Console.WriteLine("{0, -12} {1,8:N1}", "Perimeter", perimeter);
         }
 
         static void Main(string[] args)
@@ -45,7 +50,7 @@ namespace RectangleCalculator
             area = CalculateArea(height, width);
             perimeter = CalculatePerimeter(height, width);
 
-            DisplayResults(area, perimeter);
+            DisplayResults(height, width, area, perimeter);
 
             Console.ReadKey();
         }
