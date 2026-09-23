@@ -4,17 +4,13 @@ namespace RectangleCalculator
 {
     internal class Program
     {
-        static void ReadInput(out double height, out double width)
+        static double GetSize(string name)
         {
             string inValue;
 
-            Console.Write("Enter the height: ");
+            Console.Write("Enter the " + name + ": ");
             inValue = Console.ReadLine();
-            height = double.Parse(inValue);
-
-            Console.Write("Enter the width: ");
-            inValue = Console.ReadLine();
-            width = double.Parse(inValue);
+            return double.Parse(inValue);
         }
 
         static double CalculateArea(double height, double width)
@@ -40,12 +36,10 @@ namespace RectangleCalculator
 
         static void Main(string[] args)
         {
-            double height;
-            double width;
-            double area;
-            double perimeter;
+            double height, width, area, perimeter;
 
-            ReadInput(out height, out width);
+            height = GetSize("height");
+            width = GetSize("width");
 
             area = CalculateArea(height, width);
             perimeter = CalculatePerimeter(height, width);
